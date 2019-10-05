@@ -34,6 +34,9 @@ double Navigation::get_acceleration()
 
 double Navigation::get_velocity()
 {
+  double a = this->get_acceleration();
+this->velocity += a*DT; //integrate
+return this->velocity;
    /// TASK 8 (PERSON A) ///////////////////////////////////////////////////////
   
   /// END OF TASK 8A ///////////////////////////////////////////////////////////
