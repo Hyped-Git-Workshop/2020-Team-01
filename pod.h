@@ -1,5 +1,6 @@
 #ifndef HYPED_GIT_WSHOP_POD_H
 #define HYPED_GIT_WSHOP_POD_H
+#include "bms.h"
 
 #include <string>
 
@@ -21,7 +22,7 @@ class Pod
     double get_pressure();
 
     /// TASK 10.2 (BOTH) ///////////////////////////////////////////////////////
-    
+    BatteryManagementSystem bms;
     /// END OF TASK 10.2 (BOTH) ////////////////////////////////////////////////
 };
 

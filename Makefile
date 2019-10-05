@@ -1,18 +1,18 @@
-OBJS = accelerometer.o pod.o
+OBJS = accelerometer.o pod.o bms.o
 CC = g++
 DEBUG = -g
 CFLAGS = -std=c++11 -Wall -c -O3 $(DEBUG)
 LFLAGS = -Wall $(DEBUG)
 
 ### TASK 5 (PERSON A) #########################################################
-main : main.o pod.o accelerometer.o
+main : main.o pod.o accelerometer.o bms.o
 	$(CC) $(OBJS) $(LFLAGS) main.o -o main
 #
-main.o : main.cpp pod.h accelerometer.h
+main.o : main.cpp pod.h accelerometer.h bms.h
 	$(CC) $(CFLAGS) main.cpp
 ### END OF TASK 5 (PERSON A) ##################################################
 
-pod.o : pod.cpp pod.h accelerometer.h
+pod.o : pod.cpp pod.h accelerometer.h bms.h
 	$(CC) $(CFLAGS) pod.cpp
 
 navigation.o : navigation.cpp navigation.h accelerometer.h
