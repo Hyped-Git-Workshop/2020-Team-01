@@ -17,6 +17,8 @@ Navigation::~Navigation()
 
 void Navigation::add_accelerometer(Accelerometer *a)
 {
+  this->accelerometers.push_back(a);
+
   /// TASK 7 (PERSON B) ////////////////////////////////////////////////////////
   
   /// END OF TASK 7B ///////////////////////////////////////////////////////////
